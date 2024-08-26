@@ -125,11 +125,18 @@
       .dropdown:hover .dropdown-content {
         display: flex;
       }
-      .material-symbols-outlined::after{
-        content:"";
-        right:-8px;
-        top:29px;
-        height:6px;
+      @media screen and (max-width: 1050px) {
+        .topnav a,
+        .dropdown,
+        .dropdownbtn {
+          z-index: 99;
+          display: block;
+          height: 51px;
+          width: 100%;
+          cursor: pointer;
+          position: sticky;
+          text-align: left;
+        }
 
       }
       .drop {
