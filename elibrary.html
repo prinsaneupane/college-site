@@ -3,8 +3,11 @@
   <head>
     <title>e-library</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width , intial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/80d7f1d153.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width" />
+    <script
+      src="https://kit.fontawesome.com/80d7f1d153.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
       /*Universal*/
       * {
@@ -12,12 +15,10 @@
         padding: 0px;
         box-sizing: border-box;
         font-family: sans-serif;
-
         /*Landing Page*/
       }
-
       .section {
-        min-height: 100vh;
+        min-height: 110vh;
         background-image: linear-gradient(
             rgba(61, 61, 61, 0.6),
             rgba(0, 0, 0, 0.6)
@@ -26,35 +27,31 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
-
       .container {
         width: 90%;
-        margin: auto;
+        margin: auto !important;
         overflow: visible;
         min-height: 50%;
         position: relative;
       }
-
       .topnav {
         overflow: hidden;
         color: black;
         text-decoration: none;
         display: block;
       }
-
       .topnav h1 {
         float: left;
         line-height: 80px;
         font-size: 35px;
         font-size: inline;
       }
-
       .topnav a {
         color: #ebebf0;
         display: flex;
         float: left;
         text-align: center;
-        padding: 28px 20px 28px 20px;
+        padding: 2rem 0.65rem;
         cursor: pointer;
         border: none;
         text-decoration: none;
@@ -65,18 +62,28 @@
         margin-left: 2px;
         position: relative;
       }
-
+      @media screen and (max-width: 1050px) {
+        .topnav a,
+        .dropdown,
+        .dropdownbtn {
+          z-index: 99;
+          display: none;
+          width: 100%;
+          cursor: pointer;
+          position: sticky;
+          text-align: left;
+        }
+      }
       .dropdown {
         float: left;
         overflow: hidden;
       }
-
       .dropdownbtn {
         color: #ebebf0;
         display: block;
         float: left;
         text-align: center;
-        padding: 28px 20px 28px 20px;
+        padding: 25px 0.5rem;
         outline: none;
         cursor: pointer;
         border: none;
@@ -86,7 +93,6 @@
         font-weight: 400;
         line-height: 1;
       }
-
       .dropdown-content {
         display: none;
         color: #0c0909;
@@ -99,7 +105,6 @@
         border: none;
         border-radius: 8px;
       }
-
       .dropdown-content ul li a {
         float: left;
         color: black;
@@ -110,55 +115,36 @@
         text-align: left;
         border-radius: 8px;
       }
-
       .dropdown-content ul li a:hover {
         color: #f56d05;
         background-color: #ffff;
       }
-
       .topnav a:hover,
       .drowpdown:hover,
       .dropdownbtn:hover {
         color: #f56d05;
       }
-
       .dropdown:hover .dropdown-content {
-        display: flex;
-      }
-      @media screen and (max-width: 1050px) {
-        .topnav a,
-        .dropdown,
-        .dropdownbtn {
-          z-index: 99;
-          display: block;
-          height: 51px;
-          width: 100%;
-          cursor: pointer;
-          position: sticky;
-          text-align: left;
-        }
-
+        display: block;
       }
       .drop {
         height: 22.5%;
         width: 30%;
       }
-
       .article {
         width: 80%;
         text-align: left;
-        transform: translateY(15vh);
+        transform: translateY(23vh);
+        position: absolute;
       }
-
       .article h2 {
         text-align: left;
-        color: #331003;
+        color: #f0f0f0;
         top: 80%;
         left: 10%;
         padding: 0 0 0 10px;
         font-weight: bold;
       }
-
       .article h1 {
         text-align: left;
         color: #ffff;
@@ -168,7 +154,6 @@
         padding: 0 0 0 10px;
         font-weight: bold;
       }
-
       .article button {
         padding: 16px;
         border-radius: 8px;
@@ -184,29 +169,34 @@
         float: center;
         font-size: 16px;
         font-weight: bold;
+        position: fixed;
       }
-
+      @media screen and (max-width: 1050px) {
+        .article {
+          transform: translateY(25vh) !important;
+          width: 80%;
+          text-align: left;
+          position: absolute;
+        }
+      }
       .article button:hover {
         background-color: #0f5b3f;
       }
-
       .logo {
-        height: 70px;
-        padding: 10px 55px 15px 0px;
+        height: 80px;
+        padding: 10px 70px 15px 10px;
         float: left;
-        width: 150px;
+        width: 175px;
         opacity: 1;
       }
-
       /*Card Section*/
       .row {
         overflow: visible;
-        margin-top: -1.9rem;
+        margin-top: -2.9rem;
         overflow: visible;
         display: flex;
         flex-wrap: wrap;
       }
-
       .column {
         width: 33%;
         height: 40%;
@@ -215,7 +205,6 @@
         display: inline-flex;
         margin-top: -1.9rem !important;
       }
-
       .card {
         padding: 12px !important;
         z-index: 9;
@@ -225,18 +214,22 @@
         box-shadow: 0px 5px 24.25px 0.75px rgba(0, 0, 0, 0.1);
         border: none;
         height: 100% !important;
-        overflow: visible;
+        width: 100%;
+        overflow: visible !important;
         display: block;
         margin-top: 0px;
-        overflow: hidden;
       }
-
+      @media screen and (max-width: 1050px) {
+        .column {
+          width: 100%;
+          height: 40%;
+        }
+      }
       .card-icon {
         height: 50px;
         width: auto;
         clear: none;
       }
-
       .p1 {
         padding-top: 30px;
         padding-right: 30px;
@@ -249,11 +242,9 @@
         line-height: 1.7;
         display: block;
       }
-
       .style {
         display: flex;
       }
-
       /*About Us*/
       .aboutus-style {
         padding: 90px 0;
@@ -273,12 +264,10 @@
         margin: 50px;
         height: fit-content;
       }
-
       .aboutus-container {
         padding: 1.9rem !important;
         width: 100%;
       }
-
       .aboutus-row {
         margin-top: -1.9rem !important;
 
@@ -288,7 +277,6 @@
         width: 80%;
         height: 80%;
       }
-
       .aboutus-column {
         width: 50%;
         height: 50%;
@@ -298,7 +286,6 @@
         display: inline-flex;
         margin-top: -1.9rem !important;
       }
-
       .image {
         width: 350px;
         padding-left: 40px;
@@ -308,20 +295,17 @@
         z-index: 1 !important;
         image-resolution: from-image 300dpi;
       }
-
       .img2 {
         position: absolute;
         top: -20px;
         left: 20px;
         z-index: 0;
       }
-
       .heading {
         color: #04aa6d;
         font-size: xx-large;
         line-height: 1.7;
       }
-
       ul li {
         list-style: none;
       }
@@ -339,36 +323,43 @@
         margin: auto;
       }
       .port-row {
-        width: 90%;
         margin: 0;
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
       }
       .port-column {
-        width: 200%;
-        height: 35%;
-        display: inline-block;
-        padding: 38px 80px 20px 28px;
+        width: 49%;
+        height: 40%;
+        display: inline-flex;
+        padding: 38px 20px 20px 20px;
         border-radius: 8px;
+        box-sizing: border-box;
       }
       .port-column2 {
-        width: 200%;
-        height: 30%;
+        width: 49%;
+        height: 40%;
         display: inline-block;
-        padding: 38px 28px 20px 85px;
+        padding: 38px 20px 20px 20px;
         border-radius: 8px;
       }
       .port-card {
-        display: flex;
+        display: block;
+        flex-wrap: nowrap;
         font-size: 18px;
         font-family: sans-serif;
         background-color: white;
         color: #0c0909;
         box-shadow: 0px 5px 24.25px 0.75px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
-        width: 120%;
-        height: 35vh;
+        width: 100%;
       }
+      @media screen and (max-width: 1050px) {
+        .port-column {
+          width: 100%;
+          height: 60%;
+        }
+      }
+
       .section-heading {
         margin-bottom: 5px;
         margin-top: 50px;
@@ -386,17 +377,14 @@
         line-height: 1;
         border-radius: 5px;
         margin-bottom: 15px;
+        text-align: center;
       }
-
       .port-image {
-        width: 35vh;
-        height: 35vh;
+        width: 35px;
+        height: 35px;
       }
       .p2 {
-        padding-left: 40px;
-        padding-right: 20px;
-        padding-top: 0px;
-        padding-bottom: 25px;
+        padding: 20px;
         font-family: Lucida Sans;
         font-size: 17px;
         font-weight: 400;
@@ -424,19 +412,15 @@
         padding: 80px 0px 0px 10px;
         margin-top: 30px;
       }
-
       .footer .container {
         max-width: 90%;
         padding-top: 12px;
       }
-
       .footer .container .row {
-        width: 90%;
         padding: 5px 10px 5px 0px;
         display: flex;
         flex-wrap: wrap;
       }
-
       .footer .container .row .column {
         width: 30%;
         flex: 0 0 auto;
@@ -446,7 +430,6 @@
         padding-bottom: 5px;
         display: block;
       }
-
       .column2 {
         width: 20%;
         flex: 0 0 auto;
@@ -456,7 +439,15 @@
         padding-bottom: 5px;
         display: block;
       }
-
+      @media screen and (max-width: 1050px) {
+        .footer .container .row .column {
+          width: 100%;
+        }
+        .column2 {
+          width: 100%;
+          padding-left: 2px;
+        }
+      }
       .column3 {
         width: 20%;
         flex: 0 0 auto;
@@ -466,7 +457,6 @@
         padding-bottom: 5px;
         display: block;
       }
-
       #col4 {
         width: 30%;
         flex: 0 0 auto;
@@ -474,6 +464,19 @@
         padding-left: 75px;
         padding-bottom: 5px;
         display: block;
+      }
+      @media screen and (max-width: 1050px) {
+        .column3 {
+          width: 100%;
+          padding-left: 2px;
+        }
+        #col4 {
+          width: 100%;
+          padding-left: 2px;
+        }
+        .brand-image {
+          padding-left: 2px;
+        }
       }
 
       .brand-image {
@@ -483,17 +486,14 @@
         margin-bottom: 1.5rem !important;
         padding: 0px 10px 2px 10px;
       }
-
       .p {
         display: block;
       }
-
       .footer-list {
         margin: 0;
         padding: 0;
         display: block;
       }
-
       .footer-list li {
         color: white;
         padding-top: 10px;
@@ -504,7 +504,6 @@
         display: block;
         text-align: left;
       }
-
       .footer h2 {
         color: #2fbfa7;
         margin-bottom: 2.2rem;
@@ -512,29 +511,30 @@
         text-align: left;
         padding: 25px 10px 15px 0px;
       }
-
       .footer h3:hover {
         cursor: pointer;
       }
-
       .footer-list li:hover {
         color: #038656;
         cursor: pointer;
       }
     </style>
   </head>
-
   <body>
     <!--Navigation-LandingPage-->
     <section class="section">
       <div class="container">
         <div class="topnav">
           <img src="image i learn 2.png" class="logo" />
-          <a href="#home" style="padding-left: 40px"><b>HOME</b></a>
+          <a href="#home" style="margin-left: auto !important"><b>HOME</b></a>
           <div class="dropdown">
             <a href="" class="dropdownbtn"
-              ><b> PAGES  </b><i class="fa-solid fa-caret-down" style="color: #fcfcfd; padding-left:5px;"></i></a>
-
+              ><b> PAGES </b
+              ><i
+                class="fa-solid fa-caret-down"
+                style="color: #fcfcfd; padding-left: 5px"
+              ></i
+            ></a>
             <div class="dropdown-content">
               <ul>
                 <li>
@@ -556,8 +556,13 @@
             </div>
           </div>
           <div class="dropdown">
-            <a href="#" class="dropdownbtn"><b>COURSES</b><i class="fa-solid fa-caret-down" style="color: #fcfcfd; padding-left:5px;"></i></a>
-
+            <a href="#" class="dropdownbtn"
+              ><b>COURSES</b
+              ><i
+                class="fa-solid fa-caret-down"
+                style="color: #fcfcfd; padding-left: 5px"
+              ></i
+            ></a>
             <div class="dropdown-content">
               <ul>
                 <li>
@@ -573,8 +578,13 @@
             </div>
           </div>
           <div class="dropdown">
-            <a href="#" class="dropdownbtn"><b>EVENTS</b><i class="fa-solid fa-caret-down" style="color: #fcfcfd; padding-left:5px;"></i></a>
-
+            <a href="#" class="dropdownbtn"
+              ><b>EVENTS</b
+              ><i
+                class="fa-solid fa-caret-down"
+                style="color: #fcfcfd; padding-left: 5px"
+              ></i
+            ></a>
             <div class="dropdown-content">
               <ul>
                 <li>
@@ -587,7 +597,13 @@
             </div>
           </div>
           <div class="dropdown">
-            <a href="#" class="dropdownbtn"><b>BLOGS</b><i class="fa-solid fa-caret-down" style="color: #fcfcfd; padding-left:5px;"></i></a>
+            <a href="#" class="dropdownbtn"
+              ><b>BLOGS</b
+              ><i
+                class="fa-solid fa-caret-down"
+                style="color: #fcfcfd; padding-left: 5px"
+              ></i
+            ></a>
 
             <div class="dropdown-content">
               <ul>
@@ -604,7 +620,13 @@
             </div>
           </div>
           <div class="dropdown">
-            <a href="#" class="dropdownbtn"><b>PORTFOLIO</b><i class="fa-solid fa-caret-down" style="color: #fcfcfd; padding-left:5px;"></i></a>
+            <a href="#" class="dropdownbtn"
+              ><b>PORTFOLIO</b
+              ><i
+                class="fa-solid fa-caret-down"
+                style="color: #fcfcfd; padding-left: 5px"
+              ></i
+            ></a>
             <div class="dropdown-content">
               <ul>
                 <li>
@@ -618,19 +640,18 @@
           </div>
           <a href="#"><b>CONTACT</b></a>
         </div>
-
         <div class="article">
           <h2>Enjoy Smooth Learning</h2>
-          <br />
+
           <h1>
             Learning from<br />
             Best Online Tutorial
           </h1>
           <button type="button">LEARN MORE</button>
         </div>
-        <!--CARD SECTION-->
       </div>
     </section>
+    <!--CARD SECTION-->
     <section class="container">
       <div class="row">
         <div class="column">
@@ -661,7 +682,6 @@
             </div>
           </div>
         </div>
-
         <div class="column">
           <div class="card">
             <div class="style">
@@ -678,6 +698,7 @@
         </div>
       </div>
     </section>
+
     <!--AboutUS--
     <section class="aboutus-style">
         <div class="aboutus-container">
@@ -689,7 +710,6 @@
                 </div>
             </div>
             <div class="aboutus-column">
-            
                 <h1 class="heading"><b>Learn Whenever,anyplace at your own place.</b></h1></div>
             </div>
         </div> 
@@ -706,12 +726,8 @@
         <div class="port-row">
           <div class="port-column">
             <div class="port-card">
-              <img
-                src="https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg"
-                class="port-image"
-              />
               <div class="p2">
-                <h4 style="padding-top: 35px; padding-bottom: 15px" class="h4">
+                <h4 style="padding-bottom: 10px" class="h4">
                   <b>Graphics Design Conference</b>
                 </h4>
                 <p>
@@ -729,14 +745,10 @@
             </div>
           </div>
           <!--Second-col-->
-          <div class="port-column2">
+          <div class="port-column">
             <div class="port-card">
-              <img
-                src="https://www.merokalam.com/wp-content/uploads/2017/05/Hello-English-Learn-English.jpg"
-                class="port-image"
-              />
               <div class="p2">
-                <h4 style="padding-top: 35px; padding-bottom: 15px" class="h4">
+                <h4 style="padding-bottom: 10px" class="h4">
                   <b>Important Learning English</b>
                 </h4>
                 <p>
@@ -762,12 +774,8 @@
         <div class="port-row">
           <div class="port-column">
             <div class="port-card">
-              <img
-                src="https://media.restless.co.uk/uploads/2020/08/7_ways_to_meet_new_people_in_the_current_climate_hero.jpg"
-                class="port-image"
-              />
               <div class="p2">
-                <h4 style="padding-top: 35px; padding-bottom: 15px" class="h4">
+                <h4 style="padding-bottom: 10px" class="h4">
                   <b>Annual Creative Meetup</b>
                 </h4>
                 <p>
@@ -784,14 +792,10 @@
               </div>
             </div>
           </div>
-          <div class="port-column2">
+          <div class="port-column">
             <div class="port-card">
-              <img
-                src="https://www.izitru.com/wp-content/uploads/2023/10/convergence-of-technology-and-art.jpg"
-                class="port-image"
-              />
               <div class="p2">
-                <h4 style="padding-top: 35px; padding-bottom: 15px" class="h4">
+                <h4 style="padding-bottom: 10px" class="h4">
                   <b>Digital Arts and Reshaping</b>
                 </h4>
                 <p>
@@ -839,7 +843,7 @@
                   style="
                     border-radius: 8px;
                     padding: 16px;
-                    margin: 50px 10px 10px 26px;
+                    margin: 50px 10px 10px 2px;
                     width: 75%;
                   "
                 />
@@ -883,7 +887,6 @@
         </div>
         <hr style="border-bottom: 2px dotted rgba(255, 255, 255, 0.2)" />
       </div>
-
       <div
         style="
           color: white;
